@@ -7,6 +7,8 @@ set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/bin)
 add_executable(learn_vscode_cpp src/main.cpp)
 add_executable(ex1_4 src/ex1_4.cpp)
 add_executable(page7_guessing_number src/page7.cpp)
+add_executable(fibo_elem src/fibo_elem.cpp)
+add_executable(bubble_sort src/bubble_sort.cpp)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
