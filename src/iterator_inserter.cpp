@@ -34,13 +34,21 @@ int main(int argc, char const *argv[])
     vector<int> ivec(ia, ia+elem_size);
 
     int ia2[elem_size];
-    vector<int> ivec2;
+    vector<int> ivec2(1);
     cout<<"Filtering integer array for values less than 8\n";
     filter(ia, ia+elem_size, ia2, elem_size, less<int>());
-
+    int ca1[2], ca2[2]; // allocate consecutive space in stack
+    ca2[0] = 1; // give them a initial value to check if they change later 
+    ca2[1] = 2;
     cout<<"Filtering integer ector for values greater than 8"<<endl;
+    vector<int>::const_iterator ivec2_iter;
     filter(ivec.begin(), ivec.end(), back_inserter(ivec2), elem_size, greater<int>());
-    
+    cout<<"Filtering integer ector for values greater than 8 to a container not large enough"<<endl;
+    cout<<"The target container is: "<<ca1[0]<<" "<<ca2[1]<<endl;
+    cout<<"before filtering, the first space after after the target container: "<<ca2[0]<<" the second is: "<<ca2[1]<<endl;
+    filter(ivec.begin(), ivec.end(), ca1, elem_size, greater<int>());
+
+    cout<<"after filtering, the first space after the target container: "<< ca2[0]<<" the second is: "<<ca2[1]<<endl;
     
     return 0;
 }
