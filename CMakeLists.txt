@@ -12,6 +12,7 @@ add_executable(bubble_sort src/bubble_sort.cpp)
 add_executable(iterator_insertor src/iterator_inserter.cpp)
 add_executable(read_from_stdio src/read_from_stdio.cpp)
 add_executable(try_const_vector_ptr src/try_const_vector_ptr.cpp)
+add_executable(ex2_2 src/ex2_2.cpp)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
