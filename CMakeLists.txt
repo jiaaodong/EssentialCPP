@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.0)
-project(effectivecpp VERSION 0.1.0)
+project(EssentialCpp VERSION 0.1.0)
 
 include(CTest)
 enable_testing()
@@ -10,6 +10,8 @@ add_executable(page7_guessing_number src/page7.cpp)
 add_executable(fibo_elem src/fibo_elem.cpp)
 add_executable(bubble_sort src/bubble_sort.cpp)
 add_executable(iterator_insertor src/iterator_inserter.cpp)
+add_executable(read_from_stdio src/read_from_stdio.cpp)
+add_executable(try_const_vector_ptr src/try_const_vector_ptr.cpp)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
