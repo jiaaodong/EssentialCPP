@@ -32,3 +32,33 @@ Container has two types:
         set:
 
             Check availability
+
+Map Container:
+
+    Three ways to check one key:
+
+        1) Use key as index <-- Not recommended
+        
+        2) Use map::iterator map::find()
+
+        3) Use map::count
+
+Set Container: 
+
+    Use `insert` to add new elements.
+
+## Chapter 4 Object-based Programming
+
+Class has two parts. The private parts are details users don't need to know, while public components are interface for end users.
+
+Private members can be accessed only inside class member functions and friend classes.
+
+### File Organization
+
+The decalaration of a class is in header file "Stack.h". This header file contains `#ifndefine` `#define` `#endif` macro to avoid repeatedly including header files. If the header file needs other libraries, such as vector/string, `#include<vector>` and `#include<string>` are also needed.
+
+The implementation of a class is in cpp file "Stack.cpp". This file defines implementation by using namespace of the class (putting `Stack::` before any member function).
+
+The main function just needs to include header file. The library that contains implementation of `Stack` is compiled by `Stack.cpp` and linked with main function. To accomplish this linking, in CMakeLists.txt add_executable() the cpp file `Stack.cpp` should also be specified. However, if Stack is already compiled into a library, it can be added by `link_directories` (now deprecated) or `target_link_libraries`.
+
+
