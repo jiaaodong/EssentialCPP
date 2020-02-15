@@ -14,6 +14,7 @@ add_executable(read_from_stdio src/read_from_stdio.cpp)
 add_executable(try_const_vector_ptr src/try_const_vector_ptr.cpp)
 add_executable(ex2_2 src/ex2_2.cpp)
 add_executable(iostream_iterator1 src/iostream_iterator1.cpp)
+add_executable(ex3_1 src/ex3_1.cpp)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
