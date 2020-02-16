@@ -61,4 +61,21 @@ The implementation of a class is in cpp file "Stack.cpp". This file defines impl
 
 The main function just needs to include header file. The library that contains implementation of `Stack` is compiled by `Stack.cpp` and linked with main function. To accomplish this linking, in CMakeLists.txt add_executable() the cpp file `Stack.cpp` should also be specified. However, if Stack is already compiled into a library, it can be added by `link_directories` (now deprecated) or `target_link_libraries`.
 
+## Data member initialization is default choice
+When making a new class (especially when making its constructor), the programmer should consider whether default member data initialization does fulfill the purpose. If not, the copy constructor should be defined to override.
+
+The copy constructor:
+```c++
+Matrix::Matrix(const Matrix& rhs)
+```
+
+When using equality sign for initialization, the constructor would be invoked, rather than the assignment operator override.
+
+__Complaints: different parts of one program is disposed everywhere in a chapter__
+__Complaints: There is no clear functionality definitions of one class at the very begining of a chapter. The functionality evolvs according to the knowledge__
+
+Two pitfalls:
+1. Cross-file mutrually include
+2. inline function cannot be compiled from different source files
+
 
