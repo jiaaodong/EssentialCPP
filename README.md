@@ -76,6 +76,10 @@ __Complaints: There is no clear functionality definitions of one class at the ve
 
 Two pitfalls:
 1. Cross-file mutrually include
-2. inline function cannot be compiled from different source files
+
+If the functions are not only declared but also defined in header file, the Triangular.h needs to include Triangular_iterator.h and Triangular_iterator.h also needs to include Triangular.h. If the definitions are written in cpp file, only including Triangular_iterator.h in Triangular.h is enough. In both cpp file, both headers(Triangular.h and Triangular_iterator.h) are included together.
+
+2. Inline function cannot be compiled from different source files
+The explanation can be found [HERE](https://stackoverflow.com/questions/34208154/inline-functions-in-cpp-files-of-shared-libraries). If defining `int operator*() const` as inline, it should be defined in Triangular_iterator.h. However, if it is defined there, the Triangular.h should be included, thus mutural including happens. If it is defined in Triangular_iterator.cpp, it cannot be declared as inline, otherwise the other files can not see it. 
 
 
