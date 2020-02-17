@@ -16,8 +16,13 @@ int sum(const Triangular& trian){
 }
 int main(int argc, char const *argv[])
 {
+    int length_seq, begin_seq;
+    cout<<"The expected length of the sequence is: ";
+    cin >> length_seq;
+    cout<<"The expected begin position of the sequence is: ";
+    cin >> begin_seq;
     // test constructor 
-    Triangular my_trian_seq(4);
+    Triangular my_trian_seq(length_seq, begin_seq);
     cout<<"The begin position of the sequence: "<<my_trian_seq.beg_pos()<<" with length: "<<my_trian_seq.length()<<endl;
 
     // test sum, next_reset(), next()
