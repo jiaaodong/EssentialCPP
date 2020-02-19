@@ -82,4 +82,9 @@ If the functions are not only declared but also defined in header file, the Tria
 2. Inline function cannot be compiled from different source files
 The explanation can be found [HERE](https://stackoverflow.com/questions/34208154/inline-functions-in-cpp-files-of-shared-libraries). If defining `int operator*() const` as inline, it should be defined in Triangular_iterator.h. However, if it is defined there, the Triangular.h should be included, thus mutural including happens. If it is defined in Triangular_iterator.cpp, it cannot be declared as inline, otherwise the other files can not see it. 
 
+Whether operator== overloading is needed if Matrix::Matrix(const Matrix&) constructor is defined?
+
+## Chapter 5 Object-oriented Programming
+
+Object-based programming cannot deal with "are-a-kind-of" relation (cross-class hierachical relation)
 

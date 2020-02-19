@@ -23,6 +23,7 @@ add_executable(iostream_iterator1 src/iostream_iterator1.cpp)
 add_executable(ex3_1 src/ex3_1.cpp)
 add_executable(ex4_1 src/ex4_1.cpp src/Stack.cpp)
 add_executable(test_trian  src/Triangular.cpp src/Triangular_iterator.cpp src/test_trian.cpp )
+add_executable(test_matrix src/Matrix.cpp src/test_Matrix.cpp)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
